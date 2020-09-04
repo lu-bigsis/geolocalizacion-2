@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geeolocalización 2</title>
+    <link rel="stylesheet" href="geoestilos.css">
+</head>
+<body>
+    <div id="mapa"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgZZK8umUqJn8d5CoIZqWPJ_qtMfqD9q0&callback=initMap" async defer></script>
+
+    <script>
+        var mapa;
+        function initMap(){
+            mapa = new.google.maps.Map(document.getElementById('mapa'),{
+                center: {lat: 53.430938, lng: -2.960841}, zoom: 18
+            });
+        }
+    </script>
+
+
+    
+
+
+    <!--Creamos un contenedor <div> al que le ponemos un 'id'.
+        Utilizamos código Js que necesita una ruta en 'src=""'. Allí colocamos una dirección que creamos con un Api Key, para ello hay que registrarse con gmail en google maps en: https://developers.google.com/maps/documentation/embed/get-api-key. Protegemos esa ruta con un 'async defer', para proteger la conexión, para poder evaluar el contenido del link -->
+
+        <!--Dsp creamos un script para la configuración. Creamos una variable con el mismo nombre del id de más arriba para evitar confusiones.
+        Hacemos una función con  nombre 'initMap' (Map es para que funcione el constructor). Internamente llamamos a 'mapa' y creamos un objeto con relación a google,  '. a donde quiero acceder', es decir, a maps, punto y el método 'Map', que es la palabra que estamos usando.
+     El document.getElementById es para que aparezca en pantalla y como parámetro le ponemos 'mapa' para que se sincronicen.
+    Después dentro de {} especificamosuna posición o una longitud (previamente buscada).
+El 'center: ' es para que aparezca centrado.
+Lo de 'zoom' es para el tamaño-->
+</body>
+</html>
